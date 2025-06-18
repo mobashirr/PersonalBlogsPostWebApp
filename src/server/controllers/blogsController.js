@@ -31,7 +31,7 @@ class blogsController{
 
     static async postBlogController(req, res) {
     try {
-        const { title, content } = req.body; // Destructure directly
+        const { title, content } = req.body;
 
         if (!title || !content) {
             return res.status(400).json({ error: "Title and content are required" });
@@ -45,7 +45,7 @@ class blogsController{
             body: newBlog.toDict()
         });
     } catch (err) {
-        console.error("Error:", err); // Log the actual error
+        console.error("Error:", err);
         res.status(500).json({ error: "Failed to create blog" });
     }
 }
@@ -82,7 +82,7 @@ class blogsController{
         const updatedBlog = await BlogModel.update(id, title, content);
 
         if (updatedBlog) {
-            res.status(200).json({ // 200 is more appropriate for a successful update
+            res.status(200).json({
                 success: true,
                 message: `Blog with id ${updatedBlog.id} updated successfully`,
                 body: [updatedBlog]
