@@ -161,7 +161,16 @@ main {
     color: #666;
     margin: 15px 0 0 0;
     line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Show only one line */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    max-height: 1.6em; /* Exactly one line height */
 }
+
+
 
 /* Action Buttons */
 .blog-card-actions {
@@ -257,6 +266,65 @@ main {
     transform: translateY(-2px);
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
+
+
+.add-blog-form {
+    background: #fff7cc;
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 700px;
+    width: calc(100% - 40px);
+}
+
+.add-blog-form label {
+    display: block;
+    margin-bottom: 15px;
+    color: #ff9900;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.add-blog-form input,
+.add-blog-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ffcc5b;
+    border-radius: 6px;
+    background: #fffef5;
+    font-size: 1rem;
+    color: #333;
+}
+
+.add-blog-form textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.add-blog-form button {
+    background: #ffcc5b;
+    color: #333;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0;
+    font-size: 1.1rem;
+}
+
+.add-blog-form button:hover {
+    background: #ff9900;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+
 
 /* Loading State */
 Loading {

@@ -2,8 +2,8 @@
 <div id="article-card">
     <% if (blog) { %>
         <h1><%= blog.Title %></h1>
-
-        <h1><%= publishDate %></h1>
+        <h1> Last update on <%= publishDate %></h1>
+        
         <p><%= blog.Content %></p>
         
     <% } %>

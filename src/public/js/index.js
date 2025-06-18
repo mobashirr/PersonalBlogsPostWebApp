@@ -27,7 +27,7 @@ async function  setBlogsList() {
       });
       const blogCard = `
     <div class="blog-card">
-      <h2 data-id=${blog.id}>${blog.Title} \t \t ${publishDate}</h2>
+      <h2 data-id=${blog.id}>${blog.Title} \t \t (${publishDate})</h2>
       <p>${blog.Content}</p>
     </div>
     `
