@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\server",
+    "\\src\\server\\views",
+    "\\src\\server\\views\\layouts",
+    "\\src\\server\\views\\partials"
+  ],
+  "SelectedNode": "\\src\\server\\views\\article.ejs",
+  "PreviewInSolutionExplorer": false
+}

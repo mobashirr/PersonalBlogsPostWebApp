@@ -1,0 +1,12 @@
+<h2>Update Article</h2>
+
+<div class="edit-blog-form">
+    <form >
+        <input type="hidden" id="blog-id" value=<%= blog.id%> />
+        <label>Title</label><br>
+        <input id="new-title-input" name="title" value="<%= blog.Title %>"><br>
+        <label>Content</label><br>
+        <textarea id="new-content-input" name="content" rows="4" cols="50" placeholder="<%= blog.Content %>"><%= blog.Content %></textarea> <br>
+        <button id="updateBtn" type="submit">Save</button>
+</form>
+</div>
