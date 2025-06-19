@@ -11,13 +11,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     if(submitEditButton)
       submitEditButton.addEventListener('click', updateButtonclicked);
 
+    document.querySelector('.Admin-Page-btn').addEventListener('click', () =>{
+        window.location = '/admin'
+    });
 });
 
 
 async function  setBlogsList() {
     const response = await fetch('api/blogs');
     const blogs = await response.json();
-    blogsContainer.innerHTML =  blogs.map(blog => 
+    let blogs_card = blogs.map(blog => 
     {
       const dateObj = new Date(blog.UpdatedAt);
       const publishDate = dateObj.toLocaleDateString('en-US', { 
@@ -34,6 +37,7 @@ async function  setBlogsList() {
     return blogCard;
     }
     ).join('');
+    blogsContainer.innerHTML = blogs_card? blogs_card:"<br> <p style='text-align: center;'> You havn't post Yet </p>";
 
     document.querySelectorAll('.blog-card').forEach(card => {
         card.addEventListener('click', (e) => {

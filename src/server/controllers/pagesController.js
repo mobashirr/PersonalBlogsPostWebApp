@@ -38,7 +38,7 @@ class pagesController {
 
     static adminPageController(req, res){
         res.render('admin', {
-            title:"admin",
+            title:"Admin",
             content: "Restricted area"
         });
     }
